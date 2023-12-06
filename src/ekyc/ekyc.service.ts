@@ -1,10 +1,11 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { DtoCreateEKYC } from './bto.create-ekyc';
 
 @Injectable()
 export class EkycService {
-    getHello(): string {
-        return 'Hello World!';
+    getHello(){
+        const res = new UnauthorizedException()
+        return res;
       }
 
     async create( dtoCreateEKYC : DtoCreateEKYC) {

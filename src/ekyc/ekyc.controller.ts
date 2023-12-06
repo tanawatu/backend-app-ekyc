@@ -7,10 +7,10 @@ export class EkycController {
   constructor(private readonly ekycService: EkycService) {}
 
   @Get()
-  getHello(): string {
+  getHello() {
     return this.ekycService.getHello();
   }
-""
+
   @Post('/')
   create(@Body() dtoCreateEKYC : DtoCreateEKYC){
     try{
